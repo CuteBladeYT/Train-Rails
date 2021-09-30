@@ -100,4 +100,26 @@ function sc1() {
 }
 ```
 `sc1()` is just shorten `selected choice 1`.<br>
-`localStorage["us"] = "1";` this is responsible to contain user's decission. `["us"]` stands for `user select` and `= "1";` is saving the decission as the first one. You can default set only 3 decissions at one time, but you can create more, if you need to.
+`localStorage["us"] = "1";` this is responsible to contain user's decission. `["us"]` stands for `user select` and `= "1";` is saving the decission as the first one. You can default set only 3 decissions at one time, but you can create more, if you need to.<br>
+Example of decission script:
+```js
+function playerDecission() {  /* Function that gets triggered by "playerDecission();" */
+  var us = localStorage["us"];  /* Get a variable to know which decission player chose */
+  var cm = localStorage["cm"];  /* Get a variable to know where the storyline stopped */
+  var sc = document.getElementById("divStoryContent");  /* Save paragraph element for easier use. You don't have to do this, but it's reccomended */
+  var scC = document.getElementById("divStoryContent").innerHTML;   /* Save paragraph content to avoid clearing progress made before */
+  switch (cm) {   /* You can also use "if ()" statement if you want */
+    case /*int*/:
+      switch (us) {   /* Same here */
+        case /*int*/:
+          sc.innerHTML = scC + /* content here */;  /* Content of progress made before + new content */
+          break;
+        case /*int*/:
+          sc.innerHTML = scC + /* content here */;  /* Content of progress made before + new content */
+          break;
+        case /*int*/:
+          sc.innerHTML = scC + /* content here */;  /* Content of progress made before + new content */
+      };
+  };
+}
+```
