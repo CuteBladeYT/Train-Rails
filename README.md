@@ -99,5 +99,5 @@ function sc1() {
   localStorage["us"] = "1";
 }
 ```
-`sc1()` is just shorten `selected choice 1`.
+`sc1()` is just shorten `selected choice 1`.<br>
 `localStorage["us"] = "1";` this is responsible to contain user's decission. `["us"]` stands for `user select` and `= "1";` is saving the decission as the first one. You can default set only 3 decissions at one time, but you can create more, if you need to.
